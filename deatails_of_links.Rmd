@@ -1,0 +1,107 @@
+---
+title: "Dataset of mtcars Analysis"
+author: "Kollepara Someswara Srikanth"
+date: "6.11.2020"
+output:
+  pdf_document:
+    toc: yes
+  ioslides_presentation: default
+  html_document:
+    number_sections: yes
+    toc: yes
+  slidy_presentation: default
+mode: selfcontained
+job: pitch presentation using shiny app
+subtitle: mtcars dataset
+highlighter: highlight.js
+widgets: bootstrap
+---
+
+##Reproducible Pitch using shiny application in coursera
+
+### to see developing data products week 4 peer graded  
+
+URL: *https://github.com/amritj/Developing-Data-Products-Week-4-Assignment*
+
+all the data of this project can be viewed in this github link of mine.akkada ani vuntai na project ela chesa and a file lo code ela rasa anni vuntai nennu enni sarlu dennini rayadaniki chala kastapadda. so kunchum dennini consider cheyandi."nennu mundhu shiny application ni thayaru chesa maruyu dhanini Rstudio's loki pampinchi publish chesa.rendovadhi nennu Rstudio presenter vupayoginchi reproducible pitch vacchi vidhamuga application thayaru chesa".dhanyavadhamulu na project ni baga chudandi.
+
+### anni vishayalu ikkada kanipinchunu
+URL: *https://www.coursera.org/learn/data-products/peer/tMYrn/course-project-shiny-application-and-reproducible-pitch*
+
+---
+
+## Dataset of mtcars(mtcars yokka dataset)
+
+### Motor fashion yokka vahanamula correction(test)
+
+> The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).
+### Source
+> Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391-411.
+```{r}
+library(datasets)
+head(mtcars, 3)
+```
+---
+
+## mtcars yokka dataset yokka vedhamu.
+
+**mtcars yokka dataset yokka mupairendu vidhamula padakundu veruveru namamulu**
+
+| Index | Field | Detail |
+------- | ----- | ------ |
+| [, 1] | mpg | Miles/(US) gallon |
+| [, 2]  | cyl | Number of cylinders |
+| [, 3]	| disp | Displacement (cu.in.) |
+| [, 4]	| hp | Gross horsepower |
+| [, 5]	| drat | Rear axle ratio |
+| [, 6]	| wt | Weight (lb/1000) |
+| [, 7]	| qsec | 1/4 mile time |
+| [, 8]	| vs | V/S |
+| [, 9]	| am | Transmission (0 = automatic, 1 = manual) |
+| [,10]	| gear | Number of forward gears |
+| [,11]	| carb | Number of carburetors |
+
+---
+
+## na panni yokka mukya vudeysam e kindha vunna code lo rasinanu nikku vastey dhanini parigatinchi telusuko.
+
+mundhu ga neru vasthadhi taruvatha nippu vathadhi a taruvatah gali vasthadhi
+
+inkka perupulu pidugulu varsham vasthadhi
+
+fhvuhsfyubvhfbyuv bchadbvuhbdas behebvyuer bcebfuruveru hurehwuivhweruihweru herwgvuiehruijwer huerhijgeoijgejje erjhguihe hvuerhwile jasdiil;eroiier jerjigjerio  jrgveuguier weggiwtj werijgiowetjoijwtg jtgwjiowetgj nwerjgiewjowegr.
+
+okkadi kallalo matti padathadhi.appudu terichaka kannipinchey vadey ma sukumarudu.
+
+```r
+  nikendhukuokkati <- reactive({
+    paste("mpg ~", "as.integer(", input$variable, ")")  })
+  
+  kudhimpu <- reactive({
+    lm(as.formula(nikendhukuokkati()), data=mpgData)  })
+  ...
+  output$kudhimpu <- renderPrint({
+    summary(kudhimpu()) })
+  
+  output$mpgPlot <- renderPlot({
+    with(mpgData, {
+      plot(as.formula(formulaTextPoint()))
+      abline(fit(), col=2)
+    })  })
+```
+
+ekka manaki teliyavalasinadhi emmi annaga nennu chala kastapadi nakku vacchina basha lo rasa nikku ardhamaitey okay ledha inka okay  kanni nakku nuvvu mataram anni marks veyyi chalu.
+
+inkka e file lo na github account yokka file yokka link maruyu na coursera submmision yokka link anni pondhu parici vuncha.anni so anni baga parikshinchi nakku baga markulu ivva valasindhi ga korukuntunanu.
+
+hhcdsgycgsduhbvyukg dfbvuhgfyuvibvue hfyuegfyiheuirwfher8 heryfhqeruiohf8erhgui gyfgeryguidfughsuig hy7erfhuierhg78erhguierhuigh huerhguierhuighuwer8ghu heruwilhr hurhufh hufhnrlow ifiejijailerioerhuetg hberbherjgkjk grjnwguiehg
+
+mi subodhayudu kollepara someswara srikanth
+nennu denini nalugu gentalu kurchuni kastapani rasinanu kunchumchusukuni maruyu snehithula yokka sahayamu chetha rasinanu edi nuvvu gamanincha vala sindhi ga chepthunna nu
+
+antey kakunda nennu eppudu okka citram gurinchi rasthunna
+
+addi baga merisey okka citrakarudi yokka chalana cirtam
+
+hufsuehuh fvnsefhgvusfhe ehfyugufer hsdfugheruiolalerio nikendhu nieku endhukudrdt
+fgtftfc ccyfty vgvytfykvgyjhfvaehgfyu weyfgy8eru.
